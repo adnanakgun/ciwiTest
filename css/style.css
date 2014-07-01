@@ -1,0 +1,170 @@
+
+#galleryContainer{
+	display: inline-block;
+	width: 710px;
+	padding: 0 20px;
+}
+
+#postRelatedInfo{
+	color: #b2b2b2;
+	font-size: 80%;
+}
+
+#imageGallery{
+	display: inline-block;
+	position: relative;
+	border: 1px solid #dddddd;
+	padding: 10px;
+}
+
+#imageGallery img#selectedImage{
+	width: 100%;
+}
+
+#imageGallery #thumbnailContainer{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	overflow: hidden;
+	margin-right: 10px;
+	height: 384px;
+	width: 688px;
+}
+
+#imageGallery #thumbnailContainer ul{
+	padding: 10px;
+	margin: 0;
+	/*width: 1000%;*/
+	white-space: nowrap;
+	display: inline-block;
+	/* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#imageGallery ul li{
+	/*float: left;*/
+	display: inline-block;
+	list-style: none;
+	cursor: pointer;
+	padding: 3px;
+}
+
+#imageGallery ul li:hover,
+#imageGallery ul li.active{
+	border: 3px solid #ed7855;
+	padding: 0;
+	height: 74px;
+}
+
+#imageGallery ul li img{
+	border: 2px solid #ffffff;
+}
+
+#imageGallery .arrow{
+	border-radius: 13px;
+	background: #ffffff;
+	width: 35px;
+	height: 90px;
+	display: table;
+	text-align: center;
+	border: 1px solid #dddddd;
+	position: absolute;
+	top: 160px;
+	color: #dddddd;
+	text-decoration: none;
+	z-index: 99;
+	font-size: 40px;
+}
+
+#imageGallery .arrow:hover{
+	border-color: #838381;
+	color: #838381;
+}
+
+#imageGallery .arrow.left{
+	left: -13px;
+}
+
+#imageGallery .arrow.right{
+	right: -13px;
+}
+
+#imageGallery .arrow span{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.ps-container .ps-scrollbar-x-rail{
+	border-radius: 0;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.ps-container .ps-scrollbar-x,
+.ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x,
+.ps-container .ps-scrollbar-x-rail.hover .ps-scrollbar-x{
+	background-color: #f5774f;
+	border-radius: 0;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.ps-container:hover .ps-scrollbar-x-rail,
+.ps-container.hover .ps-scrollbar-x-rail{
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+#textGallery{
+	border-bottom: 3px solid #202c2c;
+}
+
+#textGallery p:first-of-type{
+	font-weight: bold;
+}
+
+#sectionFooter p{
+	color: #b2b2b2;
+	display: inline-block;
+	margin-right: 20px;
+}
+
+#sectionFooter a{
+	border-radius: 5px;
+	background: #f1e79f;
+	padding: 5px 20px;
+	display: inline-block;
+	text-align: center;
+	border: 1px solid #dbd392;
+	color: #a08b22;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+#sectionFooter a span{
+	display: table-cell;
+	vertical-align: middle;	
+}
+
+@media only screen and (max-width: 767px) {
+
+	#galleryContainer{
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	#imageGallery #thumbnailContainer{
+		display: none;
+	}
+
+	#imageGallery .arrow{
+		position: static;
+		box-sizing: border-box;
+	    width: 50%;
+	    height: auto;
+	    float: left;
+		border-radius: 0;
+	}
+}
